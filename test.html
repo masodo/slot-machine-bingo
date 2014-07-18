@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body onLoad="new_card()">
+<script language="JavaScript" > 
+
+<!--   
+/*function new_card() {
+	var temp = document.images.length;
+	for (i = 0; i < temp; i++) {
+		var num = Math.round(Math.random()*10);
+			if (num >= 10) { num--; }
+		var pic = num + ".gif";
+		document.images[i].src=pic;
+	}
+} */
+
+var srange = 15;   //highest possible number in columns
+var lrange = 30;
+var irange = 45;
+var nrange = 60;
+var grange = 75;
+
+function new_card() {
+	var num = Math.round(Math.random()*74)+1; 
+	var ones = num % 10;
+	var tens = (num-ones) / 10;
+	document.images[0].src= (ones + ".gif");
+	document.images[1].src= (tens + ".gif");
+}
+//     -->
+</script>
+
+<STYLE type=text/css>
+#row3b { position:absolute;  left:100px;  top:157px;  width:30px;  height:50px;  z-index:9;  visibility:visible;}
+#row3a { position:absolute;  left:70px;  top:157px;  width:30px;  height:50px;  z-index:9;  visibility:visible;}
+</style>
+
+<div id=row3b>
+<img src="6.GIF" width=30 height=50 alt="" border="0" name="s3b">
+
+</div>
+<div id="row3a">
+<img src="6.GIF" width=30 height=50 alt="" border="0" name="s3a">
+</div>
+
+</body>
+</html>
