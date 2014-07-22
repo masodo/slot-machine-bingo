@@ -1,0 +1,28 @@
+<h2 id='title'>Welcome to Slot Machine Bingo</h2>
+
+<h3>Spins: {{ spins }}</h3>
+
+<h3>Score: {{ score }}</h3>
+
+<a class="btn btn-primary" {{ action newGameClick }}>New Game</a>
+
+<a class="btn btn-primary" {{ action spinClick }}>Spin</a>
+
+<p>
+
+<div class="container">
+{{#each row in cells }}
+  <div class="row">
+    {{#each cell in row }}
+      <div class="col-md-1 cell" {{ action cellClick cell}}>{{ cell.value }}</div>
+    {{/each}}
+  </div>
+{{/each}}
+
+
+  <div class="row spinner-row">
+    {{#each cell in spinner}}
+      <div class="col-md-1 spinner-col">{{ cell }}</div>
+    {{/each}}
+  </div>
+</div>

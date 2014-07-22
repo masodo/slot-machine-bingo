@@ -1,0 +1,44 @@
+html, body {
+  margin: 20px;
+}
+
+.cell {
+  font-size: 3em;
+}
+
+.spinner-row {
+  margin-top: 50px;
+}
+
+.spinner-col {
+  background-color: #999;
+  font-size: 3.5em;
+}
+
+#precache {HEIGHT: 1px; LEFT: 20px; POSITION: absolute; TOP: 20px; VISIBILITY: visible; WIDTH: 1px; Z-INDEX: 1}
+#border {HEIGHT: 560px; LEFT: 80px; POSITION: absolute; TOP: 20px; VISIBILITY: visible; WIDTH: 524px; Z-INDEX: 2}
+
+#s_col {  HEIGHT: 365px; LEFT: 83px; POSITION: absolute; TOP: 130px; VISIBILITY: visible; WIDTH: 73px; Z-INDEX: 3}
+#l_col {  HEIGHT: 365px; LEFT: 157px; POSITION: absolute; TOP: 130px; VISIBILITY: visible; WIDTH: 73px; Z-INDEX: 3}
+#i_col {  HEIGHT: 365px; LEFT: 228px; POSITION: absolute; TOP: 130px; VISIBILITY: visible; WIDTH: 73px; Z-INDEX: 3}
+#n_col {  HEIGHT: 365px; LEFT: 300px; POSITION: absolute; TOP: 130px; VISIBILITY: visible; WIDTH: 73px; Z-INDEX: 3}
+#g_col {  HEIGHT: 365px; LEFT: 373px; POSITION: absolute; TOP: 130px; VISIBILITY: visible; WIDTH: 73px; Z-INDEX: 3}
+
+#row1a {  HEIGHT: 50px; LEFT: 7px; POSITION: absolute; TOP: 12px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 4}
+#row1b {  HEIGHT: 50px; LEFT: 37px; POSITION: absolute; TOP: 12px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 5}
+#row2a {  HEIGHT: 50px; LEFT: 7px; POSITION: absolute; TOP: 85px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 6}
+#row2b {  HEIGHT: 50px; LEFT: 37px; POSITION: absolute; TOP: 85px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 7}
+#row3a {  HEIGHT: 50px; LEFT: 7px; POSITION: absolute; TOP: 157px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 8}
+#row3b {  HEIGHT: 50px; LEFT: 37px; POSITION: absolute; TOP: 157px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 9}
+#row4a {  HEIGHT: 50px; LEFT: 7px; POSITION: absolute; TOP: 230px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 10}
+#row4b {  HEIGHT: 50px; LEFT: 37px; POSITION: absolute; TOP: 230px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 11}
+#row5a {  HEIGHT: 50px; LEFT: 7px; POSITION: absolute; TOP: 300px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 12}
+#row5b {  HEIGHT: 50px; LEFT: 37px; POSITION: absolute; TOP: 300px; VISIBILITY: visible; WIDTH: 30px; Z-INDEX: 13}
+
+#scoreboard { HEIGHT: 50px; LEFT: 650px; POSITION: absolute; TOP: 85px; VISIBILITY: visible; WIDTH: 160px; Z-INDEX: 4}
+#scoretext {  HEIGHT: 45px; LEFT: 650px; POSITION: absolute; TOP: 40px; VISIBILITY: visible; WIDTH: 130px; Z-INDEX: 4}
+
+#slot_row { HEIGHT: 260px; LEFT: 85px; POSITION: absolute; TOP: 500px; VISIBILITY: visible; WIDTH: 524px; Z-INDEX: 2}
+#spin_butt {  HEIGHT: 60px; LEFT: 650px; POSITION: absolute; TOP: 550px; VISIBILITY: visible; WIDTH: 150px; Z-INDEX: 2}
+
+#spin_count { HEIGHT: 60px; LEFT: 650px; POSITION: absolute; TOP: 500px; VISIBILITY: visible; WIDTH: 150px; Z-INDEX: 2}

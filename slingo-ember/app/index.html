@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SlingoEmber</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/slingo-ember.css">
+  </head>
+  <body>
+    <script>
+      window.SlingoEmberENV = {{ENV}};
+      window.EmberENV = window.SlingoEmberENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/slingo-ember.js"></script>
+    <script>
+      window.SlingoEmber = require('slingo-ember/app')['default'].create(SlingoEmberENV.APP);
+    </script>
+  </body>
+</html>
