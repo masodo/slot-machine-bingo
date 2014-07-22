@@ -1,3 +1,6 @@
+$fa-font-path: "/assets/fonts" !default;
+@import "vendor/fontawesome/scss/font-awesome.scss";
+
 html, body {
   margin: 20px;
 }
@@ -13,6 +16,10 @@ html, body {
 .spinner-col {
   background-color: #999;
   font-size: 3.5em;
+}
+
+.joker {
+
 }
 
 #precache {HEIGHT: 1px; LEFT: 20px; POSITION: absolute; TOP: 20px; VISIBILITY: visible; WIDTH: 1px; Z-INDEX: 1}
