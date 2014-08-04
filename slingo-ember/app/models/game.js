@@ -15,9 +15,16 @@ export default Ember.Object.extend({
     this.set('coins', 0);
     this.set('devils', 0);
     this.set('board', Board.create());
+    this.set('scoreArray', [0]);
   },
 
   score: function() {
-    return this.get('board.covered') * 100;
-  }.property('coins', 'devils', 'board.covered')
+    return this.get('scoreArray').reduce( function(prev, score) {
+      return prev + score;
+    });
+  }.property('scoreArray.@each'),
+
+  addScoreValue: function(value) {
+    this.get('scoreArray').pushObject(value);
+  },
 });
