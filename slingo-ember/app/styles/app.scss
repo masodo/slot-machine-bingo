@@ -16,10 +16,11 @@ html, body {
 .spinner-col {
   background-color: #999;
   font-size: 3.5em;
+  line-height: 1.42857143;
 }
 
-.joker {
-
+.is-covered {
+  text-align: center;
 }
 
 #precache {HEIGHT: 1px; LEFT: 20px; POSITION: absolute; TOP: 20px; VISIBILITY: visible; WIDTH: 1px; Z-INDEX: 1}
