@@ -76,7 +76,7 @@ export default Ember.Object.extend({
 
     for (var i = 0; i < this.get('width'); i++) {
       if (this.specialRoll()) {
-        spinner[i] = Cell.create({icon: this.specialCell()});
+        spinner[i] = Cell.create({icon: this.specialCell(), jokerNotUsed: true});
       } 
       else {
         var min = (i * columnIncrement) + 1;
@@ -135,7 +135,6 @@ export default Ember.Object.extend({
     var count = 0;
 
     if(this.get('cells')) {
-      console.log(cols);
       for (var col = 0; col < cols; col++) {
         count = 0;
         for (var row = 0; row < rows; row++) {
