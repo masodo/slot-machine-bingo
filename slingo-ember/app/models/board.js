@@ -152,6 +152,40 @@ export default Ember.Object.extend({
     return completeCount;
   }.property('cells.@each.isCovered'),
 
+  diagnalComplete: function() {
+    var cols = this.get('width');
+    var rows = this.get('height');
+    var completeCount = 0;
+    var count = 0;
+
+    if(this.get('cells')) {
+      for (var col = 0; col < cols; col++) {
+        if (this.getCell(col, col).get('isCovered')) {
+          count++;
+        }
+      }
+
+      if (count === rows) {
+        completeCount++;
+      }
+
+      count = 0;
+
+      for (var col = 0; col < cols; col++) {
+        var row = rows - 1 - col;
+        if (this.getCell(col, row).get('isCovered')) {
+          count++;
+        }
+      }
+
+      if (count === rows) {
+        completeCount++;
+      }
+    }
+
+    return completeCount;
+  }.property('cells.@each.isCovered'),
+
   boardComplete: function() {
     return this.get('cells').isEvery('isCovered', true);
   }.property('cells.@each.isCovered'),
