@@ -171,7 +171,7 @@ export default Ember.Object.extend({
 
       count = 0;
 
-      for (var col = 0; col < cols; col++) {
+      for (col = 0; col < cols; col++) {
         var row = rows - 1 - col;
         if (this.getCell(col, row).get('isCovered')) {
           count++;

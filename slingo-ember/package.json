@@ -29,6 +29,7 @@
     "broccoli-sass": "^0.2.1",
     "broccoli-static-compiler": "^0.1.4",
     "broccoli-merge-trees": "^0.1.4",
-    "font-awesome": "^4.1.0"
+    "font-awesome": "^4.1.0",
+    "ember-cli-ember-data": "^0.1.0"
   }
 }

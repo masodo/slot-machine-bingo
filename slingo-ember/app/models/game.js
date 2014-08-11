@@ -51,6 +51,17 @@ export default Ember.Object.extend({
   },
 
   boardCompleteObserver: function() {
-    console.log('game over!');
+    if (this.get('gameOver')) {
+      var spins = this.get('spins');
+
+      if (spins < 12) {
+        this.addScoreValue(11000);
+      } else if (spins === 13) {
+        this.addScoreValue(10000);
+      } else {
+        var bonus = 9000 - ((spins - 14) * 500);
+        this.addScoreValue(bonus);
+      }
+    }
   }.observes('gameOver')
 });
