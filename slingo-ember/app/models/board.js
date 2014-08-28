@@ -72,16 +72,19 @@ export default Ember.Object.extend({
 
   spin: function() {
     var columnIncrement = this.get('columnIncrement');
-    var spinner = new Array(this.get('width'));
+    var spinner = Ember.A();
+    var tile;
 
     for (var i = 0; i < this.get('width'); i++) {
       if (this.specialRoll()) {
-        spinner[i] = Cell.create({icon: this.specialCell(), jokerNotUsed: true});
+        tile = Cell.create({icon: this.specialCell(), jokerNotUsed: true});
+        spinner.pushObject(tile);
       } 
       else {
         var min = (i * columnIncrement) + 1;
         var max = (i + 1) * columnIncrement;
-        spinner[i] = Cell.create({value: this.randomInt(min, max)});
+        tile = Cell.create({value: this.randomInt(min, max)});
+        spinner.pushObject(tile);
       }
     }
     this.set('spinner', spinner);
@@ -188,5 +191,5 @@ export default Ember.Object.extend({
 
   boardComplete: function() {
     return this.get('cells').isEvery('isCovered', true);
-  }.property('cells.@each.isCovered'),
+  }.property('cells.@each.isCovered')
 });

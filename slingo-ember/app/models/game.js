@@ -28,11 +28,7 @@ export default Ember.Object.extend({
     this.get('gameOver');
   },
 
-  score: function() {
-    return this.get('scoreArray').reduce( function(prev, score) {
-      return prev + score;
-    });
-  }.property('scoreArray.[]'),
+  score: Ember.computed.sum('scoreArray'),
 
   addScoreValue: function(value) {
     this.get('scoreArray').pushObject(value);

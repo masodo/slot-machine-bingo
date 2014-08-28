@@ -26,6 +26,7 @@ export default Ember.ObjectController.extend({
     newGameClick: function() {
       this.get('content').newGame();
     },
+
     cellClick: function(cell) {
       cell.set('value', 'X');
       if ( this.canCover(cell) ) {
@@ -33,6 +34,7 @@ export default Ember.ObjectController.extend({
         this.get('content').addScoreValue(200);
       }
     },
+
     spinClick: function() {
       var spins = this.get('spins');
       if (spins < this.get('maxSpins')) {
