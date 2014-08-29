@@ -59,5 +59,9 @@ export default Ember.Object.extend({
         this.addScoreValue(bonus);
       }
     }
-  }.observes('gameOver')
+  }.observes('gameOver'),
+
+  toString: function() {
+    return "Game";
+  }
 });

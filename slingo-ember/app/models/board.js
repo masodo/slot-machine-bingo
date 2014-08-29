@@ -77,7 +77,7 @@ export default Ember.Object.extend({
 
     for (var i = 0; i < this.get('width'); i++) {
       if (this.specialRoll()) {
-        tile = Cell.create({icon: this.specialCell(), jokerNotUsed: true});
+        tile = Cell.create({value: this.specialCell(), jokerNotUsed: true});
         spinner.pushObject(tile);
       } 
       else {
@@ -97,13 +97,13 @@ export default Ember.Object.extend({
   specialCell: function() {
     var rand = this.randomInt(1, 5);
     if (rand < 2) {
-      return 'fa fa-reddit';
+      return 'joker';
     }
     else if (rand < 4 ) {
-      return 'fa fa-github';
+      return 'devil';
     }
     else {
-      return 'fa fa-usd';
+      return 'coin';
     }
   },
 

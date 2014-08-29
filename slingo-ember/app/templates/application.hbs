@@ -15,10 +15,9 @@
   </div>
 {{/each}}
 
-
   <div class="row spinner-row">
     {{#each cell in spinner}}
-    <div {{bind-attr class=":col-md-1 :spinner-col cell.icon"}}>{{ cell.value }}</div>
+      {{spinner-cell cell=cell}}
     {{/each}}
   </div>
 
