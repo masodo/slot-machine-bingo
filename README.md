@@ -1,3 +1,7 @@
+Redesigned graphically as Masodo Slingo
+
+Updated code and added submit score function
+
 slot-machine-bingo
 ==================
 
