@@ -138,7 +138,7 @@ document.getElementById("submit_butt").style.visibility = "visible";
 document.getElementById("replay_butt").style.visibility = "visible";
 }
 		inc_spins();
-        count_it = 0;
+        //count_it = 0;
 		for (i = 0; i < 5; i++) {
 			var num = Math.round(Math.random()*77)+1;
 			while (!range(num, i*15+1, (i+1)*15) && num < 76) { num = Math.round(Math.random()*77)+1; }
@@ -179,12 +179,12 @@ function display(ara, start) {
 //when user clicks on a number to cover it this checks to see if it's legal then covers if it is
 function cover(ara, ind, slot_ten, slot_one, image_num, sca) {
 if (ara[ind] != 100){
-	if ( (slot_ten == "CrownL" && count_it > .3) || (ara[ind] == slot_ten && ara[ind+1] == slot_one) )  {   //33333333333333333333333333333333333333333333333
+	if ( (slot_ten == "CrownL" && count_it != 0) || (ara[ind] == slot_ten && ara[ind+1] == slot_one) )  {   //33333333333333333333333333333333333333333333333
 		document.images[image_num].src="ExL.gif";
 		document.images[image_num+1].src="ExR.gif";
 		ara[ind] = 100;
 		ara[10] += 1;
-        count_it -= 1;
+                count_it -= 1;
 		inc_score (sca, 4, 2);
 }}
 		if (ara[10] == 5) { inc_score(sca, 1, 1); }   //check for full vertical cover
