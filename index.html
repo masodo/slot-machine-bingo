@@ -163,18 +163,18 @@ function display(ara, start) {
 }
 //when user clicks on a number to cover it this checks to see if it's legal then covers if it is
 function cover(ara, ind, slot_ten, slot_one, image_num, sca) {
-	if ( (slot_ten == "CrownL" && count_it != 0) || (ara[ind] == slot_ten && ara[ind+1] == slot_one) && (ara[ind] != 100)  )  {   //33333333333333333333333333333333333333333333333
+	if ( ((slot_ten == "CrownL" && count_it != 0) || (ara[ind] == slot_ten && ara[ind+1] == slot_one)) && (ara[ind] != 100)  )  {   //33333333333333333333333333333333333333333333333
 		document.images[image_num].src="ExL.gif";
 		document.images[image_num+1].src="ExR.gif";
 		ara[ind] = 100;
 		ara[10] += 1;
                 count_it -= 1;
 		inc_score (sca, 4, 2);
-}
+
 		if (ara[10] == 5) { inc_score(sca, 1, 1); }   //check for full vertical cover
 		if (s_array[ind] == 100 && l_array[ind] == 100 && i_array[ind] == 100 && n_array[ind] == 100 && g_array[ind] == 100) { inc_score(sca, 1, 1); }
         display(score_array, 51);
-	
+}	
 var str = ""+score_array+"";
 var res = str.replace(/,/g, "");
 MyTally = res; 
