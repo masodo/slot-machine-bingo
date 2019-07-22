@@ -163,7 +163,7 @@ function display(ara, start) {
 }
 //when user clicks on a number to cover it this checks to see if it's legal then covers if it is
 function cover(ara, ind, slot_ten, slot_one, image_num, sca) {
-	if ( ((slot_ten == "CrownL" && count_it != 0) || (ara[ind] == slot_ten && ara[ind+1] == slot_one)) && (ara[ind] != 100)  )  {   //33333333333333333333333333333333333333333333333
+	if ( ((slot_ten == "CrownL" && count_it > 0) || (ara[ind] == slot_ten && ara[ind+1] == slot_one)) && (ara[ind] != 100)  )  {   //33333333333333333333333333333333333333333333333
 		document.images[image_num].src="ExL.gif";
 		document.images[image_num+1].src="ExR.gif";
 		ara[ind] = 100;
