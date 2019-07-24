@@ -168,7 +168,7 @@ function cover(ara, ind, slot_ten, slot_one, image_num, sca) {
 		document.images[image_num+1].src="ExR.gif";
 		ara[ind] = 100;
 		ara[10] += 1;
-                count_it -= 1;
+                if(slot_ten == "CrownL" && count_it > 0)count_it -= 1;
 		inc_score (sca, 4, 2);
 
 		if (ara[10] == 5) { inc_score(sca, 1, 1); }   //check for full vertical cover
